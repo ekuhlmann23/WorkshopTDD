@@ -1,0 +1,17 @@
+{
+    "name": "Presentation",
+    "rootNamespace": "UCR.WorkshopTDD.Presentation",
+    "references": [
+        "GUID:b8e12def6bafc8f4da4e17e7855ca1e6",
+        "GUID:82aede711a69b8e4fbd23918ef911882"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

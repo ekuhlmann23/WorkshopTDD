@@ -1,0 +1,16 @@
+{
+    "name": "Application",
+    "rootNamespace": "UCR.WorkshopTDD.Application",
+    "references": [
+        "GUID:82aede711a69b8e4fbd23918ef911882"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
