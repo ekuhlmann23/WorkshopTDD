@@ -1,6 +1,6 @@
 {
     "name": "Application",
-    "rootNamespace": "UCR.WorkshopTDD.Application",
+    "rootNamespace": "UCR.WorkshopTDD",
     "references": [
         "GUID:82aede711a69b8e4fbd23918ef911882"
     ],
