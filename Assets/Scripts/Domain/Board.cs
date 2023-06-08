@@ -1,4 +1,6 @@
-﻿namespace UCR.WorkshopTDD.Domain
+﻿using System;
+
+namespace UCR.WorkshopTDD.Domain
 {
     public class Board
     {
@@ -6,7 +8,7 @@
 
         public int Rows { get; }
         public int Columns { get; }
-        public bool IsEmpty { get; }
+        public bool IsEmpty { get; private set; }
 
         public Board(int rows, int columns)
         {
@@ -24,7 +26,18 @@
 
         public void SetSymbol(Symbol symbol, int row, int column)
         {
+            if (symbol == Symbol.Empty)
+            {
+                throw new InvalidOperationException();
+            }
+
+            if (board[row - 1, column - 1] != Symbol.Empty)
+            {
+                throw new InvalidOperationException();
+            }
+
             board[row - 1, column - 1] = symbol;
+            IsEmpty = false;
         }
     }
 }
