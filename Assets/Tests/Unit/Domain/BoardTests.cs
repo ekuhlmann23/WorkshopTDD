@@ -31,15 +31,23 @@ namespace UCR.WorkshopTDD.Tests.Unit.Domain
 
             // Assert
             Assert.IsTrue(game.Board.IsEmpty);
-            // Assert.AreEqual(Symbol.Empty, game.Board.GetSymbol(0, 0));
-            // Assert.AreEqual(Symbol.Empty, game.Board.GetSymbol(0, 1));
-            // Assert.AreEqual(Symbol.Empty, game.Board.GetSymbol(0, 2));
-            // Assert.AreEqual(Symbol.Empty, game.Board.GetSymbol(1, 0));
-            // Assert.AreEqual(Symbol.Empty, game.Board.GetSymbol(1, 1));
-            // Assert.AreEqual(Symbol.Empty, game.Board.GetSymbol(1, 2));
-            // Assert.AreEqual(Symbol.Empty, game.Board.GetSymbol(2, 0));
-            // Assert.AreEqual(Symbol.Empty, game.Board.GetSymbol(2, 1));
-            // Assert.AreEqual(Symbol.Empty, game.Board.GetSymbol(2, 2));
+        }
+
+        [Test]
+        [TestCase(Symbol.X, 1, 2)]
+        [TestCase(Symbol.O, 1, 2)]
+        [TestCase(Symbol.X, 3, 2)]
+        [TestCase(Symbol.O, 3, 3)]
+        public void SettingASymbolOnBoard_PersistsTheSymbol(Symbol symbol, int row, int column)
+        {
+            // Arrange
+            var board = new Board(Game.Rows, Game.Columns);
+
+            // Act
+            board.SetSymbol(symbol, row, column);
+
+            // Assert
+            Assert.AreEqual(symbol , board.GetSymbol(row, column));
         }
     }
 }
